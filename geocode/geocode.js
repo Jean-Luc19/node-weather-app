@@ -1,8 +1,7 @@
 const request = require('request');
+
 const geocodeAddress = (address, callback) => {
-
   const encodedAddress = encodeURIComponent(address);
-
   const cb = (error, response, body) => {
     if (error) {
       callback(`Unable to connect to google servers.`);
